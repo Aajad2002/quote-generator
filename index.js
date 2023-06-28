@@ -4,9 +4,9 @@ require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-
+const cors=require('cors')
+app.use(cors())
 app.use(express.json());
-
 app.get('/quotes', async (req, res) => {
   try {
     const title = req.query.title;
