@@ -11,7 +11,7 @@ app.get('/quotes', async (req, res) => {
   try {
     const title = req.query.title;
     const response = await axios.post('https://api.openai.com/v1/engines/davinci/completions', {
-      prompt: `quotes about ${title} wrtie in hindi`,
+      prompt: `quotes about ${title}`,
       max_tokens: 100,
       temperature: 0.7,
       n: 1
